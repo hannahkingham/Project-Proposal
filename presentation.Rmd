@@ -133,3 +133,11 @@ species %>%
 
 We can see there is quite a big variation in these, our question we are going to focus on is why?
 ---
+#Initial visualisation
+```{r include=TRUE}
+ggplot(parks, aes(x = park_name, y = acres )) +
+ geom_bar() +
+  coord_flip()
+```  
+---
+  
