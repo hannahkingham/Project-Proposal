@@ -101,7 +101,7 @@ The variables we are using are:
 
 - Abundance
 
-- Concervation status
+- Conservation status
 
 ---
 #Plot Ideas
