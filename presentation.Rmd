@@ -60,12 +60,17 @@ class: inverse, center, middle
 
 ---
 
-class: inverse, middle, center
+# Data Glimpse - parks
 
-# Using xaringan
-
+```{r include=TRUE}
+glimpse(parks)
+```
 ---
-
+#Data Glimpse - species
+```{r include=TRUE}
+glimpse(species)
+```
+---
 # xaringan
 
 - The presentation is created using the `xaringan` package
