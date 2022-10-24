@@ -36,7 +36,7 @@ species <- read_csv("Data/species.csv")
 
 ```{r include=FALSE}
 style_xaringan(
-  title_slide_background_image = "img/confetti.jpg"
+  title_slide_background_image = "img/park.jpg"
 )
 ```
 
