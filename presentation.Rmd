@@ -22,6 +22,7 @@ library(palmerpenguins)
 library(knitr)
 library(xaringanthemer)
 library(janitor)
+library(forcats)
 ```
 
 ```{r setup, include=FALSE}
@@ -134,10 +135,20 @@ species %>%
 We can see there is quite a big variation in these, our question we are going to focus on is why?
 ---
 #Initial visualisation
-```{r include=TRUE}
-ggplot(parks, aes(x = park_name, y = acres )) +
- geom_bar() +
+
+```{r echo = FALSE}
+parks %>%
+  arrange(desc(acres))%>%
+  head(10)%>%
+  ggplot(mapping = 
+           aes(x = park_name,
+               y = acres)) +
+  geom_bar(stat = "identity")+
   coord_flip()
-```  
+```
+
+
+
 ---
+
   
