@@ -101,6 +101,8 @@ The variables we are using are:
 
 - Abundance
 
+- Concervation status
+
 ---
 #Plot Ideas
 
