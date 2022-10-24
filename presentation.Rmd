@@ -77,10 +77,28 @@ glimpse(species)
 
 class: inverse, center, middle
 
-# Data Analysis Plan
+#Data Analysis Plan
 
 
 ---
+#variables
 
+-The variables we are using are:
+
+-Park name 
+
+-Acres 
+
+-Category 
+
+-Order 
+
+-Family 
+
+-Common names 
+
+-Occurrence 
+
+-Abundance
 
 ---
