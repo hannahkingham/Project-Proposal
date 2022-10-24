@@ -43,7 +43,7 @@ style_xaringan(
 
 class: center, middle
 
-# To investigate and compare the life expectancy of countries of different social and economic status and investigate the main factors affecting life expectancy.
+# To investigate, compare and predict the life expectancy of countries of different social and economic status and investigate the main factors affecting life expectancy.
 
 
 ---
