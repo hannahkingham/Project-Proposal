@@ -83,22 +83,31 @@ class: inverse, center, middle
 ---
 #variables
 
--The variables we are using are:
+The variables we are using are:
 
--Park name 
+- Park name 
 
--Acres 
+- Acres 
 
--Category 
+- Category 
 
--Order 
+- Order 
 
--Family 
+- Family 
 
--Common names 
+- Common names 
 
--Occurrence 
+- Occurrence 
 
--Abundance
+- Abundance
+
+---
+#Plot Ideas
+
+- Investigate how park area affects number of distinct species
+
+- The effect of conservation on diversity
+
+- Count of species abundance in a smaller selection of parks
 
 ---
