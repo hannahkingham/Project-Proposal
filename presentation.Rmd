@@ -82,21 +82,19 @@ class: inverse, center, middle
 
 The variables we are using are:
 
-- Park name 
+- Country = the country
+- Year = year of data 
+- Life expectancy = expected lifetime 
+- schooling = 
+- income composition of resources 
+- popuation
+- gdp
+- adult mortality = Adult Mortality Rates of both sexes (probability of dying between 15 and 60 years per 1000 population)
+- infant deaths = Number of Infant Deaths per 1000 population
+- bmi
+- total expendature = 
+- alcohol = Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)
 
-- Acres 
-
-- Category 
-
-- Order 
-
-- Family 
-
-- Common names 
-
-- Occurrence 
-
-- Abundance
 
 ---
 #Investigation and Plot Ideas
