@@ -44,6 +44,9 @@ class: center, middle
 
 # To investigate and compare species diversity in 56 different US national parks and investigating which factors might affect diversity.
 
+.footnote[
+Title Slide Image: KUONI 
+]
 ---
 
 class: inverse, center, middle
