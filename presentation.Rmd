@@ -134,14 +134,24 @@ life_exp %>%
 ```
 There is clearly a large difference in these values, our project will try to discover why.
 ---
-#Initial visualisation
-
+#Afghanistan Life Expectancy 2000-2015
 ```{r echo = FALSE}
-
+life_exp %>%
+  filter(country == "Afghanistan")%>%
+  ggplot(mapping = 
+           aes(x = year, 
+               y = life_expectancy))+
+  geom_line()+
+  labs(x = "Year",
+       y = "Life Expectancy (years)")+
+  options(out.width = "50%")
+       
 ```
 
+---
+#Initial Visualisation Discussion
 
+We can see from the visualisation on the previous slide that the life expectancy is increasing over time, this is consistent with the summary statistics calculated earlier.
 
 ---
-
   
