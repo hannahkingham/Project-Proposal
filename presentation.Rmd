@@ -1,5 +1,5 @@
 ---
-title: "Biodeversity in US National Parks"
+title: "WHO Life Expectancy"
 subtitle: "Project Proposal"
 author: "Team name <br> Hannah, Joana and Max"
 institute: "University of Edinburgh"
@@ -31,9 +31,7 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```
 
 ```{r load-data, include=FALSE}
-parks <- read_csv("Data/parks.csv") %>%
-  clean_names()
-species <- read_csv("Data/species.csv") %>%
+life_exp <- read_csv("Data/Life Expectancy Data.csv") %>%
   clean_names()
 
 ```
@@ -61,22 +59,18 @@ class: inverse, center, middle
 
 # The Data
 
-- 'Biodiversity in National Parks' available on Kaggle, collected from the US National Park Service database 
+- 'Life Expectancy (WHO)' available on Kaggle, collected from the World Health Organisation (WHO) and United Nations website
 
-- Two data sets, parks.csv and species.csv that will need to be joined
+- One dataset "Life Expectancy Data.csv"
 
 ---
 
 # Data Glimpse - parks
 
 ```{r include=TRUE}
-glimpse(parks)
+
 ```
----
-#Data Glimpse - species
-```{r include=TRUE}
-glimpse(species)
-```
+
 ---
 
 class: inverse, center, middle
@@ -120,14 +114,7 @@ The variables we are using are:
 Below is a table showing some summary statistics about the number of distinct species in the parks.
 
 ```{r echo = FALSE}
-species %>%
-  filter(occurrence == "Present")%>%
-  group_by(park_name)%>%
-  summarise(n = n_distinct(species_id))%>%
-  arrange(desc(n))%>%
-  summarise(max = max(n), 
-            min = min(n),
-            mean = mean(n))
+
 
 
 ```
@@ -137,14 +124,7 @@ We can see there is quite a big variation in these, our question we are going to
 #Initial visualisation
 
 ```{r echo = FALSE}
-parks %>%
-  arrange(desc(acres))%>%
-  head(10)%>%
-  ggplot(mapping = 
-           aes(x = park_name,
-               y = acres)) +
-  geom_bar(stat = "identity")+
-  coord_flip()
+
 ```
 
 

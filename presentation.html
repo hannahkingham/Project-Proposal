@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Biodeversity in US National Parks</title>
+    <title>WHO Life Expectancy</title>
     <meta charset="utf-8" />
     <meta name="author" content="Team name   Hannah, Joana and Max" />
     <meta name="date" content="2022-10-24" />
@@ -13,7 +13,7 @@
 class: center, middle, inverse, title-slide
 
 .title[
-# Biodeversity in US National Parks
+# WHO Life Expectancy
 ]
 .subtitle[
 ## Project Proposal
@@ -56,54 +56,16 @@ class: inverse, center, middle
 
 # The Data
 
-- 'Biodiversity in National Parks' available on Kaggle, collected from the US National Park Service database 
+- 'Life Expectancy (WHO)' available on Kaggle, collected from the World Health Organisation (WHO) and United Nations website
 
-- Two data sets, parks.csv and species.csv that will need to be joined
+- One dataset "Life Expectancy Data.csv"
 
 ---
 
 # Data Glimpse - parks
 
 
-```r
-glimpse(parks)
-```
 
-```
-## Rows: 56
-## Columns: 6
-## $ park_code &lt;chr&gt; "ACAD", "ARCH", "BADL", "BIBE", "BISC", "BLCA", "BRCA", "CAN…
-## $ park_name &lt;chr&gt; "Acadia National Park", "Arches National Park", "Badlands Na…
-## $ state     &lt;chr&gt; "ME", "UT", "SD", "TX", "FL", "CO", "UT", "UT", "UT", "NM", …
-## $ acres     &lt;dbl&gt; 47390, 76519, 242756, 801163, 172924, 32950, 35835, 337598, …
-## $ latitude  &lt;dbl&gt; 44.35, 38.68, 43.75, 29.25, 25.65, 38.57, 37.57, 38.20, 38.2…
-## $ longitude &lt;dbl&gt; -68.21, -109.57, -102.50, -103.25, -80.08, -107.72, -112.18,…
-```
----
-#Data Glimpse - species
-
-```r
-glimpse(species)
-```
-
-```
-## Rows: 119,248
-## Columns: 14
-## $ species_id          &lt;chr&gt; "ACAD-1000", "ACAD-1001", "ACAD-1002", "ACAD-1003"…
-## $ park_name           &lt;chr&gt; "Acadia National Park", "Acadia National Park", "A…
-## $ category            &lt;chr&gt; "Mammal", "Mammal", "Mammal", "Mammal", "Mammal", …
-## $ order               &lt;chr&gt; "Artiodactyla", "Artiodactyla", "Carnivora", "Carn…
-## $ family              &lt;chr&gt; "Cervidae", "Cervidae", "Canidae", "Canidae", "Can…
-## $ scientific_name     &lt;chr&gt; "Alces alces", "Odocoileus virginianus", "Canis la…
-## $ common_names        &lt;chr&gt; "Moose", "Northern White-Tailed Deer, Virginia Dee…
-## $ record_status       &lt;chr&gt; "Approved", "Approved", "Approved", "Approved", "A…
-## $ occurrence          &lt;chr&gt; "Present", "Present", "Present", "Not Confirmed", …
-## $ nativeness          &lt;chr&gt; "Native", "Native", "Not Native", "Native", "Unkno…
-## $ abundance           &lt;chr&gt; "Rare", "Abundant", "Common", NA, "Common", NA, NA…
-## $ seasonality         &lt;chr&gt; "Resident", NA, NA, NA, "Breeder", NA, "Vagrant", …
-## $ conservation_status &lt;chr&gt; NA, NA, "Species of Concern", "Endangered", NA, NA…
-## $ x14                 &lt;lgl&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…
-```
 ---
 
 class: inverse, center, middle
@@ -147,18 +109,12 @@ The variables we are using are:
 Below is a table showing some summary statistics about the number of distinct species in the parks.
 
 
-```
-## # A tibble: 1 × 3
-##     max   min  mean
-##   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;
-## 1  3888   555 1487.
-```
 
 We can see there is quite a big variation in these, our question we are going to focus on is why?
 ---
 #Initial visualisation
 
-&lt;img src="presentation_files/figure-html/unnamed-chunk-5-1.png" width="80%" /&gt;
+
 
 
 
