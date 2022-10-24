@@ -64,10 +64,9 @@ class: inverse, center, middle
 - One dataset "Life Expectancy Data.csv"
 
 ---
-
-# Data Glimpse - parks
-
-```{r include=TRUE}
+Data Glimpse
+```{r echo=FALSE}
+glimpse(life_exp)
 
 ```
 
