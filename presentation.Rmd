@@ -21,6 +21,7 @@ library(tidyverse)
 library(palmerpenguins)
 library(knitr)
 library(xaringanthemer)
+library(janitor)
 ```
 
 ```{r setup, include=FALSE}
@@ -29,8 +30,10 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 ```
 
 ```{r load-data, include=FALSE}
-parks <- read_csv("Data/parks.csv")
-species <- read_csv("Data/species.csv")
+parks <- read_csv("Data/parks.csv") %>%
+  clean_names()
+species <- read_csv("Data/species.csv") %>%
+  clean_names()
 
 ```
 
@@ -101,8 +104,6 @@ The variables we are using are:
 
 - Abundance
 
-- Conservation status
-
 ---
 #Plot Ideas
 
@@ -112,4 +113,23 @@ The variables we are using are:
 
 - Count of species abundance in a smaller selection of parks
 
+---
+#Some Summary Statistics
+
+Below is a table showing some summary statistics about the number of distinct species in the parks.
+
+```{r echo = FALSE}
+species %>%
+  filter(occurrence == "Present")%>%
+  group_by(park_name)%>%
+  summarise(n = n_distinct(species_id))%>%
+  arrange(desc(n))%>%
+  summarise(max = max(n), 
+            min = min(n),
+            mean = mean(n))
+
+
+```
+
+We can see there is quite a big variation in these, our question we are going to focus on is why?
 ---
