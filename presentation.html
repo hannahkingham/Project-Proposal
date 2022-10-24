@@ -128,13 +128,29 @@ The variables we are using are:
 - Specific investigation into the effect of a high infant mortality on life expectancy
 
 ---
-#Some Summary Statistics
+#Summary Statistics - Life expectancy in 2000 and 2015
 
-Below is a table showing some summary statistics about the number of distinct species in the parks.
+Below is a table showing some summary statistics about the life expectancy of countries in the year 2000, by their development status
 
 
+```
+## # A tibble: 2 × 4
+##   status       min   max  mean
+##   &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 Developed     71  81.1  76.8
+## 2 Developing    39  79.1  64.6
+```
 
-We can see there is quite a big variation in these, our question we are going to focus on is why?
+Below shows the same statistics but for 2015:
+
+```
+## # A tibble: 2 × 4
+##   status       min   max  mean
+##   &lt;chr&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+## 1 Developed   73.6    88  80.7
+## 2 Developing  51      85  69.7
+```
+There is clearly a large difference in these values, our project will try to discover why.
 ---
 #Initial visualisation
 

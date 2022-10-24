@@ -108,17 +108,31 @@ The variables we are using are:
 - Specific investigation into the effect of a high infant mortality on life expectancy
 
 ---
-#Some Summary Statistics
+#Summary Statistics - Life expectancy in 2000 and 2015
 
-Below is a table showing some summary statistics about the number of distinct species in the parks.
+Below is a table showing some summary statistics about the life expectancy of countries in the year 2000, by their development status
 
 ```{r echo = FALSE}
-
+life_exp %>%
+  filter(year == "2000")%>%
+  group_by(status)%>%
+  summarise(min = min(life_expectancy),
+            max = max(life_expectancy),
+            mean = mean(life_expectancy))
 
 
 ```
 
-We can see there is quite a big variation in these, our question we are going to focus on is why?
+Below shows the same statistics but for 2015:
+```{r echo = FALSE}
+life_exp %>%
+  filter(year == "2015")%>%
+  group_by(status)%>%
+  summarise(min = min(life_expectancy),
+            max = max(life_expectancy),
+            mean = mean(life_expectancy))
+```
+There is clearly a large difference in these values, our project will try to discover why.
 ---
 #Initial visualisation
 
