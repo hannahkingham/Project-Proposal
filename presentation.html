@@ -43,9 +43,7 @@ class: center, middle
 
 # To investigate and compare the life expectancy of countries of different social and economic status and investigate the main factors affecting life expectancy.
 
-.footnote[
-Title Slide Image: KUONI 
-]
+
 ---
 
 class: inverse, center, middle
@@ -107,7 +105,7 @@ The variables we will mostly be using are:
 - population
 - life_expectancy
 - status = Developed or Developing status
-- schooling = Number of years of Schooling(years)
+- schooling = Number of years of Schooling
 - income_composition_of_resources = Human Development Index (index ranging from 0 to 1)
 - gdp = Gross Domestic Product per capita (in USD)
 - adult_mortality = Adult Mortality Rates (probability of dying between 15 and 60 years per 1000 population)
@@ -148,20 +146,24 @@ There are some interesting features about the dataset that can be seen with thes
 - There exist developing countries with a higher life expectancy than some developed countries.
 
 - Why is the range of the life expectancy in developing countries so much larger than that of developed?
+
 ---
 #Investigation and Plot Ideas From These Initial Observations
 
-- Look at how the life expectancy of a particular developed and developing country and see how they changed with time
+- Look at how the life expectancy of a particular developed and developing country and see how they change with time - potential reasons for changes or no changes.
 
-- Specific investigation into the effect of a high infant mortality on life expectancy 
+- Try to identify which factors have the largest effect on the life expectancy of a country to see if there are any ways for a country to increase it e.g offering a certain vaccination
+
+- Specific investigation into the effect of a high infant mortality on life expectancy as we are predicting this might result in an unusually low value.
 
 - Investigate why certain developing countries actually have a high life expectancy
 
+- Perhaps try to do some sort of prediction for life expectancy given certain values
 
 ---
 #Afghanistan Life Expectancy 2000-2015
 .pull-left[
-- We can see from the visualisation on the previous slide that the life expectancy is increasing over time
+- We can see from the visualisation that the life expectancy is increasing over time
 
 - This is consistent with the summary statistics calculated earlier.
 ]
@@ -172,9 +174,7 @@ There are some interesting features about the dataset that can be seen with thes
 #Distribution of Life Expectancy 2000
 .pull-left[
 
-- We can see that it is left skewed
-
-- Developing countries seem to have a very wide range of life expectancies
+- We can see that it is slightly left skewed from mean values calculated earlier
 
 - We can see that we have observations for many more developing countries than developed
 
@@ -183,7 +183,7 @@ There are some interesting features about the dataset that can be seen with thes
 .pull-right[
 &lt;img src="presentation_files/figure-html/unnamed-chunk-2-1.png" width="100%" /&gt;
 ]
----
+
  
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
