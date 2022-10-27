@@ -44,7 +44,7 @@ style_xaringan(
 
 class: center, middle
 
-# To investigate and compare the life expectancy of countrys of different social and economic status.
+# To investigate and compare the life expectancy of countries of different social and economic status.
 
 .footnote[
 Title Slide Image: KUONI 
