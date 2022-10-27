@@ -38,17 +38,17 @@ life_exp <- read_csv("Data/Life Expectancy Data.csv") %>%
 
 ```{r include=FALSE}
 style_xaringan(
-  title_slide_background_image = "img/park.jpg"
 )
 ```
 
 class: center, middle
 
-# To investigate and compare the life expectancy of countries of different social and economic status.
+<<<<<<< HEAD
+=======
+# To investigate, compare and predict the life expectancy of countries of different social and economic status and investigate the main factors affecting life expectancy.
 
-.footnote[
-Title Slide Image: KUONI 
-]
+>>>>>>> f62ca63884f2fbda0f183058c58716f82530137c
+
 ---
 
 class: inverse, center, middle
@@ -65,9 +65,8 @@ class: inverse, center, middle
 
 ---
 Data Glimpse
-```{r echo=FALSE}
+```{r glimpse, echo=FALSE}
 glimpse(life_exp)
-
 ```
 
 ---
@@ -78,41 +77,30 @@ class: inverse, center, middle
 
 
 ---
-#variables
+#Variables
 
-The variables we are using are:
+The variables we will mostly be using are:
 
-- Park name 
-
-- Acres 
-
-- Category 
-
-- Order 
-
-- Family 
-
-- Common names 
-
-- Occurrence 
-
-- Abundance
-
----
-#Investigation and Plot Ideas
-
-- Investigate life expectancy vs development
-
-- Look at how the life expectancy of a particular developed and developing country and see how it has changed over time
-
-- Specific investigation into the effect of a high infant mortality on life expectancy
+- country
+- year
+- population
+- life_expectancy
+- status = Developed or Developing status
+- schooling = Number of years of Schooling
+- income_composition_of_resources = Human Development Index (index ranging from 0 to 1)
+- gdp = Gross Domestic Product per capita (in USD)
+- adult_mortality = Adult Mortality Rates (probability of dying between 15 and 60 years per 1000 population)
+- infant deaths = Number of Infant Deaths per 1000 population
+- bmi = Average Body Mass Index of entire population
+- total expendature = General government expenditure on health as a percentage of total government expenditure (%)
+- alcohol = Alcohol, recorded per capita (15+) consumption (in litres of pure alcohol)
 
 ---
 #Summary Statistics - Life expectancy in 2000 and 2015
 
 Below is a table showing some summary statistics about the life expectancy of countries in the year 2000, by their development status
 
-```{r echo = FALSE}
+```{r summary stats 2000, echo = FALSE}
 life_exp %>%
   filter(year == "2000")%>%
   group_by(status)%>%
@@ -124,7 +112,7 @@ life_exp %>%
 ```
 
 Below shows the same statistics but for 2015:
-```{r echo = FALSE}
+```{r summary stats 2015, echo = FALSE}
 life_exp %>%
   filter(year == "2015")%>%
   group_by(status)%>%
@@ -134,8 +122,36 @@ life_exp %>%
 ```
 There is clearly a large difference in these values, our project will try to discover why.
 ---
+#Discussion on Summary Statistics
+
+There are some interesting features about the dataset that can be seen with these summary statistics.
+
+- There exist developing countries with a higher life expectancy than some developed countries.
+
+- Why is the range of the life expectancy in developing countries so much larger than that of developed?
+
+---
+#Investigation and Plot Ideas From These Initial Observations
+
+- Look at how the life expectancy of a particular developed and developing country and see how they change with time - potential reasons for changes or no changes.
+
+- Try to identify which factors have the largest effect on the life expectancy of a country to see if there are any ways for a country to increase it e.g offering a certain vaccination
+
+- Specific investigation into the effect of a high infant mortality on life expectancy as we are predicting this might result in an unusually low value.
+
+- Investigate why certain developing countries actually have a high life expectancy
+
+- Perhaps try to do some sort of prediction for life expectancy given certain values
+
+---
 #Afghanistan Life Expectancy 2000-2015
-```{r echo = FALSE}
+.pull-left[
+- We can see from the visualisation that the life expectancy is increasing over time
+
+- This is consistent with the summary statistics calculated earlier.
+]
+.pull-right[
+```{r Afghanistan Graph, echo=FALSE, fig.width=4, warning=FALSE, out.width="100%"}
 life_exp %>%
   filter(country == "Afghanistan")%>%
   ggplot(mapping = 
@@ -143,15 +159,30 @@ life_exp %>%
                y = life_expectancy))+
   geom_line()+
   labs(x = "Year",
-       y = "Life Expectancy (years)")+
-  options(out.width = "50%")
-       
+       y = "Life Expectancy (years)")
 ```
-
+]
 ---
-#Initial Visualisation Discussion
+#Distribution of Life Expectancy 2000
+.pull-left[
 
-We can see from the visualisation on the previous slide that the life expectancy is increasing over time, this is consistent with the summary statistics calculated earlier.
+- We can see that it is slightly left skewed from mean values calculated earlier
 
----
-  
+- We can see that we have observations for many more developing countries than developed
+
+- Clearly shows the large range of developing country life expectancy compared to the range for developed countries that we were introduced to with the summary statistics
+]
+.pull-right[
+```{r echo=FALSE, fig.width=4, warning=FALSE, out.width="100%"}
+life_exp %>%
+  filter(year == 2000)%>%
+  ggplot(mapping = 
+           aes(x = life_expectancy))+
+  geom_histogram(binwidth = 1, mapping = aes(fill = status))+
+  labs(x = "Life Expectancy (years)",
+       y = "Count",
+       fill = "Status")
+``` 
+]
+
+ 
